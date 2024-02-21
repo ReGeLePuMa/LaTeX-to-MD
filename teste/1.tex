@@ -1,0 +1,72 @@
+\documentclass[a4paper, 12pt, twoside]{article}
+\newcommand{\geometrysetting}{vmargin = 2cm, hmargin = 2cm}\newcommand{\languagesetting}{romanian}
+\usepackage{hyperref}
+
+
+
+\title{Conversie}\date{}
+\begin{document}\maketitle
+
+
+\section{Descrierea problemei}\label{sec:problem}
+
+Se dă un fișier \LaTeX care trebuie transformat în fișier Markdown \href{https://en.wikipedia.org/wiki/Markdown}{Markdown}, după regulile prezentate mai jos.
+
+Code test \texttt{here}.
+
+\begin{verbatim}
+for i:=maxint to 0 do
+begin
+{ do nothing }
+end;
+Write('Case insensitive ');
+Write('Pascal keywords.');
+\end{verbatim}
+
+
+\textbf{Atenție!} Există numeroase arome (\emph{flavors}) de markdown. Vom utiliza în mod \textbf{exclusiv} specificațiile din specificația originală de markdown, chiar dacă nu vom utiliza \emph{toate} aceste specificații.
+
+
+
+Se vor transforma următoarele elemente: 												\begin{itemize}
+	\item titlul documentului -- argument al comenzii \texttt{title} -- se convertește în titlu Markdown cu subliniere dublă (se vor folosi 10 simboluri \texttt{=} indiferent de lungimea titlului)
+	\item orice titlu de secțiune -- argument al unei comenzi de forma \texttt{*section} -- se convertește în titlu Markdown cu subliniere simplă (se vor folosi 10 simboluri \texttt{-} indiferent de lungimea titlului)
+	\item comanda \texttt{quotation} se onvertește la un \emph{blockquote}. În formatul \texttt{.md} se vor pune maxim 10 cuvinte pe linie.
+	\item comenzile \begin{itemize}
+		\item \texttt{textbf},
+		\item \texttt{textit},
+		\item \texttt{emph},
+		\item \texttt{texttt}
+		\end{itemize}
+		se vor converti, respectiv, la formatări de tip 
+		\begin{itemize}
+		\item \emph{bold}, 
+		\item \emph{emphasis}, 
+		\item \emph{emphasis} 
+		\item și cod.
+		\end{itemize}
+	% COMENTARIU
+	\item conținutul dintr-un mediu \texttt{verbatim} se convertește într-un bloc de cod. % COMENTARIU
+	\item comentariile \LaTeX nu vor apărea la ieșire.
+	\item pentru orice alt mediu, la fel ca și pentru orice bloc, directivele de început și de sfârșit vor fi ignorate și conținutul lor se va afișa, prelucrat conform regulilor enunșate.	\end{itemize}
+
+\begin{enumerate}
+	\item One
+		\begin{enumerate}
+		\item Two
+		\item Three
+		\item Stay with me
+	\end{enumerate}
+	\item Four
+	\item Five Six Seven Ate Nine
+\end{enumerate}
+
+\begin{quotation}
+This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.
+\end{quotation}
+
+Cam atât.
+
+\end{document}

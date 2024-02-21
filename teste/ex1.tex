@@ -1,0 +1,45 @@
+% Petrea Andrei 331CC
+\documentclass[a4paper, 12pt, twoside]{article}
+\newcommand{\geometrysetting}{vmargin = 2cm, hmargin = 2cm}\newcommand{\languagesetting}{romanian}
+\usepackage{hyperref}
+
+\title{Document Exemplu 1}
+\date{13.10.2023}
+
+\begin{document}
+\maketitle
+
+\section{Introducere}\label{sec:intro}
+
+Acesta este un document LaTeX de exemplu pe care îl vom transforma într-un document Markdown.
+
+\textbf{Text cu Bold.}
+
+\emph{Text Emphasized.}
+
+\begin{quotation}
+    Alegerile parlamentare din România din 1946 au fost convocate pe 19 noiembrie 1946 în Regatul României. Rezultatele oficiale i-au dat câștigători pe comuniștii români (PCR) și pe aliații lor din Blocul Partidelor Democrate (BPD):
+Uniunea Populară Maghiară (UPM/MNSz), facțiunea proguvernamentală țărănistă din jurul lui Dr. Nicolae Lupu și Comitetul Democrat Evreiesc.
+Aceste alegeri au marcat un pas decisiv spre destabilizarea monarhiei constituționale române și instaurarea regimului comunist în țară la sfârșitul anului următor.
+\end{quotation}
+
+\begin{enumerate}
+    \item Primul element
+    \item Al doilea element
+    \item Al treilea element 
+        \begin{enumerate}
+            \item Primul sub-element
+            \item Al doilea sub-element
+        \end{enumerate}
+\end{enumerate}
+
+\begin{verbatim}
+#include <stdio.h>
+
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+\end{verbatim}
+
+\end{document}

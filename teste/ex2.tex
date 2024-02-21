@@ -1,0 +1,97 @@
+% Petrea Andrei 331CC
+% This is an example LaTeX file. The percent sign is used to mark the
+% start of a comment.
+%
+% - Michael Weeks, January, 2003
+%
+\documentclass{article}
+\usepackage[dvips]{graphics}
+\begin{document}
+\title{My Example LaTeX Paper}
+\author{Michael Weeks}
+\maketitle
+
+\textheight{7.62in}
+% The above command controls the height of the text
+
+\begin{abstract}
+This is the abstract. You can use this file to start your own LaTeX file,
+and just delete the stuff you do not need. \LaTeX is a lot like working
+with HTML: you can specify where text effects begin, and where they end.
+\end{abstract}
+
+\section{Introduction}\label{sec:intro}
+Here is the introduction.
+Since there is no blank line between these first 3 sentences, they are
+treated as one paragraph.
+Here is a vertical space (of 0.3 inches):
+\vspace{.3in}
+
+And here is a \hspace{.3in}horizontal space (of 0.3 inches).
+
+A blank line means that the last paragraph is over, and it is time to start
+a new one.
+
+You can have text in \textit{italics} font, or in \textbf{bold} font and 
+text \underline{underlined}. You can also have \emph{emphasized} text.
+
+
+Citing a reference: This is a book about VLSI \cite{Weste93}.
+Also, the references contain a good conference paper \cite{LiY88},
+and a good journal article \cite{BiS92}.
+
+What if you want to include a figure?
+Here is an example, figure~\ref{fig:phasor1}, that is saved in
+encapsulated postscript format.
+
+\begin{figure}
+  \centering
+  \caption{A complex number can be shown as a point or a vector}
+  \label{fig:phasor1}
+\end{figure}
+
+
+Skip a lot of space \bigskip vertically.
+
+\section{Here is some Math}\label{sec:math}
+This is different from the previous section, section~\ref{sec:intro}.
+This section gives some examples of Math.
+
+Using superscript: 2^3.
+
+Using subscript: x_0.
+
+If you use a character, but LaTeX complains about it, try putting a
+back-slash before it. For example,
+f = x^y uses the carat character.
+If you want to end a line, use 2 back-slashes.
+If you want the backslash character \\ in your document,
+this can be done, too.
+
+For more info, see
+
+
+\href{https://www.maths.tcd.ie/~7ddwilkins/LaTeXPrimer}{LaTeXPrimer}
+
+
+% Now here is the reference section.
+
+\begin{thebibliography}{99}
+
+% Book
+\emph{Weste93} Neil H. E. Weste and Kamran Eshraghian, \textit{Principles
+of CMOS VLSI Design}, 2nd ed. Reading, MA: Addison-Wesley, 1993.
+
+%Example of a Conference Paper
+\emph{LiY88} R. A. Lincoln and K. Yao, ``Efficient Systolic Kalman
+Filtering Design by Dependence Graph Mapping,'' in \textit{VLSI Signal
+Processing, III}, IEEE Press, R. W. Brodersen and H. S. Moscovitz Eds.,
+1988, pp.~396--410.
+
+% Example of a Journal Paper
+\emph{BiS92} C. H. Bischof and G. M. Shroff, ``On Updating Signal
+Subspaces,'' \textit{IEEE Trans. on Signal Processing}, vol.~40, no.~1,
+pp.~96--105, Jan. 1992.
+
+\end{thebibliography}
+\end{document}
